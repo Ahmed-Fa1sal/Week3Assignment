@@ -1,0 +1,20 @@
+<div class="dashboard">
+    <h2>Documents Dashboard</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Status</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let document of documents">
+          <td>{{ document.title }}</td>
+          <td>{{ document.status }}</td>
+          <td>{{ document.createdAt | date:'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,31 @@
+<div class="document-upload">
+    <h2>Upload Document</h2>
+    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="title">Title</label>
+        <input id="title" formControlName="title" />
+        <div *ngIf="title?.invalid && title?.touched" class="error">
+          Title is required (max length 200).
+        </div>
+      </div>
+  
+      <div>
+        <label for="filePath">File Path</label>
+        <input id="filePath" formControlName="filePath" />
+        <div *ngIf="filePath?.invalid && filePath?.touched" class="error">
+          File path is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="status">Status</label>
+        <input id="status" formControlName="status" />
+        <div *ngIf="status?.invalid && status?.touched" class="error">
+          Status is required.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="uploadForm.invalid">Upload</button>
+    </form>
+  </div>
+  

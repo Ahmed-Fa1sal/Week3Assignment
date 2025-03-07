@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
@@ -69,14 +70,19 @@ namespace backend.Controllers
             return Ok(document);
         }
 
-        // POST: api/verify
+        // POST: api/documents/verify
         [HttpPost("verify")]
-        public async Task<IActionResult> VerifyDocument([FromBody] string verificationCode)
+        public async Task<IActionResult> VerifyDocument([FromBody] VerificationRequest request)
         {
+            if (request == null || string.IsNullOrEmpty(request.VerificationCode))
+            {
+                return BadRequest("Verification code is required");
+            }
+
             using (IDbConnection dbConnection = new SqlConnection(_connectionString))
             {
                 var query = "SELECT * FROM Documents WHERE VerificationCode = @VerificationCode";
-                var document = await dbConnection.QueryFirstOrDefaultAsync<Document>(query, new { VerificationCode = verificationCode });
+                var document = await dbConnection.QueryFirstOrDefaultAsync<Document>(query, new { VerificationCode = request.VerificationCode });
 
                 if (document == null)
                 {
@@ -87,6 +93,13 @@ namespace backend.Controllers
 
                 return Ok(document);
             }
+        }
+
+        // Inner class for verification request
+        public class VerificationRequest
+        {
+            [Required]
+            public string VerificationCode { get; set; }
         }
     }
 }
