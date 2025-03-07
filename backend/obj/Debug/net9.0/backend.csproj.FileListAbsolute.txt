@@ -155,3 +155,5 @@ C:\Users\DerRi\week3A\backend\obj\Debug\net9.0\refint\backend.dll
 C:\Users\DerRi\week3A\backend\obj\Debug\net9.0\backend.pdb
 C:\Users\DerRi\week3A\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
 C:\Users\DerRi\week3A\backend\obj\Debug\net9.0\ref\backend.dll
+C:\Users\DerRi\week3A\backend\bin\Debug\net9.0\Dapper.dll
+C:\Users\DerRi\week3A\backend\obj\Debug\net9.0\backend.sourcelink.json

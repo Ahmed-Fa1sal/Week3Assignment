@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "0O0PhXhRPPY=",
+  "dgSpecHash": "1L3otAuw5G4=",
   "success": true,
   "projectFilePath": "C:\\Users\\DerRi\\week3A\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DerRi\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\DerRi\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\DerRi\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\DerRi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\DerRi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
     "C:\\Users\\DerRi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
